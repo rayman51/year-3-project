@@ -1,0 +1,8 @@
+{
+  "name": "devdactic-simplelogin",
+  "app_id": "547e5bff",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
