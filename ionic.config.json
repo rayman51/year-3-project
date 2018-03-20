@@ -1,6 +1,6 @@
 {
-  "name": "devdactic-simplelogin",
-  "app_id": "547e5bff",
+  "name": "ionic-2-firebase",
+  "app_id": "",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
