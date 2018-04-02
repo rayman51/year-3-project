@@ -2,18 +2,20 @@
 
 
   "map": [{
-    "name": "Kadiköy",
-    "lat": 40.992511,
-    "lng": 29.023635,
+    "name": "Sportsground",
+    "lat": 53.279792,
+    "lng": -9.040148,
     "center": true
-  }, {
-    "name": "Moda",
-    "lat": 40.980850,
-    "lng": 29.021265
-  }, {
-    "name": "Topkapi Palace",
-    "lat": 41.010771,
-    "lng": 28.982987
-  }]
-
+  },
+  {
+    "name": "GMIT",
+    "lat": 53.278303,
+    "lng":   -9.010837,
+    "center": true
+  },{
+    "name": "NUI",
+    "lat": 53.278381,
+    "lng": -9.061778,
+    "center": true
+}] 
 }
