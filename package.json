@@ -22,6 +22,7 @@
     "@ionic/storage": "2.0.0",
     "angularfire2": "^2.0.0-beta.8",
     "cordova-plugin-geolocation": "^4.0.1",
+    "cordova-plugin-ionic": "^4.1.0",
     "firebase": "^3.7.1",
     "ionic-angular": "2.2.0",
     "ionic-native": "2.4.1",

@@ -2,20 +2,10 @@
 
 
   "map": [{
-    "name": "Sportsground",
-    "lat": 53.279792,
-    "lng": -9.040148,
-    "center": true
-  },
-  {
-    "name": "GMIT",
-    "lat": 53.278303,
-    "lng":   -9.010837,
-    "center": true
-  },{
     "name": "NUI",
-    "lat": 53.278381,
-    "lng": -9.061778,
+    "lat": 53.27756,
+    "lng": -9.061513,
     "center": true
-}] 
+  }]
+
 }
