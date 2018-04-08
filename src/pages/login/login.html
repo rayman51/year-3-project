@@ -3,17 +3,17 @@
 		<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-		<ion-title>Login or Sign up</ion-title>
+		<ion-title>Login </ion-title>
 	</ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class = "background">
 	<div class="logo">
-		<img src="assets/img/logo2.jpg" alt="Ionic logo">
+		<img src="assets/img/logo4.jpg" alt="Ionic logo">
 	</div>
 
 	<form #loginForm="ngForm" novalidate>
-		<ion-list no-lines>
+		<ion-list class = "list">
 			<ion-item>
 				<ion-label stacked color="primary">Username</ion-label>
 				<ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
@@ -43,7 +43,7 @@
 			<p ion-text color="danger" padding-left>{{message}}</p>
 		</div>
 		
-			<ion-label stacked color="primary">Don't have an account,<br> press menu button to sign up</ion-label>
+			<ion-label class = "label" stacked color="primary">Don't have an account,<br> press menu button to sign up</ion-label>
 
 		
 	</form>

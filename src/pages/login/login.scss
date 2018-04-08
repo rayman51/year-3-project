@@ -2,7 +2,8 @@
 // Login, Signup, Support
 
 page-user {
-  body {background-color: rgb(122, 121, 121);}
+  //.background{
+    //background-color: rgb(122, 121, 121);}
 
   .logo {
     padding: 20px 0;
@@ -12,11 +13,9 @@ page-user {
 
     img {
       max-width: 200px;
-      background-color: rgb 122, 121, 121;
+     
     }
   }
+ 
 
-  .list {
-    margin-bottom: 0;
-  }
 }

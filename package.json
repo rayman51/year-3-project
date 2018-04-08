@@ -18,11 +18,16 @@
     "@angular/platform-browser": "2.4.8",
     "@angular/platform-browser-dynamic": "2.4.8",
     "@angular/platform-server": "2.4.8",
+    "@ionic-native/code-push": "^4.6.0",
     "@ionic-native/geolocation": "^4.6.0",
     "@ionic/storage": "2.0.0",
     "angularfire2": "^2.0.0-beta.8",
+    "cordova-plugin-code-push": "^1.11.9",
+    "cordova-plugin-file": "^4.3.3",
+    "cordova-plugin-file-transfer": "^1.6.3",
     "cordova-plugin-geolocation": "^4.0.1",
     "cordova-plugin-ionic": "^4.1.0",
+    "cordova-plugin-zip": "^3.1.0",
     "firebase": "^3.7.1",
     "ionic-angular": "2.2.0",
     "ionic-native": "2.4.1",
@@ -38,7 +43,11 @@
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-geolocation": {}
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-code-push": {},
+      "cordova-plugin-file": {},
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-zip": {}
     }
   }
 }
