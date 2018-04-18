@@ -18,7 +18,7 @@ import { DataDetailPage } from '../pages/data-detail/data-detail';
 import {  MapData } from '../providers/map-data';
 import { UserData } from '../providers/user-data';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
-//import { Geolocation } from '@ionic-native/geolocation';
+import { Geolocation } from '@ionic-native/geolocation';
 export const FirebaseConfig = {
     apiKey: "AIzaSyAJmnl98WcVHRkYHFyq_mDkJThAiD0SLnI",
     authDomain: "fitapp-ace2b.firebaseapp.com",
@@ -65,6 +65,6 @@ export const FirebaseAuthConfig = {
     TabsPage,
     DataDetailPage
   ],
-  providers: [MapData, UserData,]
+  providers: [MapData, UserData, Geolocation ]
 })
 export class AppModule { }
