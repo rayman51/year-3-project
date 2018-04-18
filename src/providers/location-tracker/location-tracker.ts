@@ -7,9 +7,12 @@ import 'rxjs/add/operator/filter';
 export class LocationTracker {
  
   public watch: any;   
-  public lat: number = 0;
-  public lng: number = 0;
- 
+  public lat: number = 0;// start lat
+  public lng: number = 0;// start lng
+  public lat2: number = 0;// end lat
+  public lng2: number = 0;// end lng
+  public dist: number = 0;
+
   constructor(public zone: NgZone, public backgroundGeolocation:BackgroundGeolocation,
   public geolocation:Geolocation) {
  
@@ -71,6 +74,29 @@ export class LocationTracker {
   stopTracking() {
  
     console.log('stopTracking');
+    let config = {
+        desiredAccuracy: 0,
+        stationaryRadius: 20,
+        distanceFilter: 10,
+        debug: true,
+        interval: 2000
+      };
+     
+      this.backgroundGeolocation.configure(config).subscribe((location) => {
+     
+        console.log('BackgroundGeolocation:  ' + location.latitude + ',' + location.longitude);
+     
+        // Run update inside of Angular's zone
+        this.zone.run(() => {
+            this.lat2 = location.latitude;
+            this.lng2 = location.latitude;
+        });
+     
+      }, (err) => {
+     
+        console.log(err);
+     
+      });
    
     this.backgroundGeolocation.finish();
     this.watch.unsubscribe();
