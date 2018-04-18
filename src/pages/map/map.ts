@@ -15,6 +15,8 @@ export class MapPage {
   map:any;
   constructor(public navCtrl: NavController,public geolocation: Geolocation, 
     public locationTracker: LocationTracker) {
+
+      
  
   }// constructor
 
