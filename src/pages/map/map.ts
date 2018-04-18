@@ -2,7 +2,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
-
+import { LocationTracker } from '../../providers/location-tracker/location-tracker';
 declare var google: any;
 
 @Component({
@@ -13,7 +13,8 @@ export class MapPage {
 
   @ViewChild('map') mapElement: ElementRef;
   map:any;
-  constructor(public navCtrl: NavController,public geolocation: Geolocation) {
+  constructor(public navCtrl: NavController,public geolocation: Geolocation, 
+    public locationTracker: LocationTracker) {
  
   }// constructor
 
@@ -22,6 +23,13 @@ export class MapPage {
       this.loadMap();
 
   }// ioViewLoad
+  start(){
+    this.locationTracker.startTracking();
+  }
+ 
+  stop(){
+    this.locationTracker.stopTracking();
+  }
 
   loadMap(){
  
