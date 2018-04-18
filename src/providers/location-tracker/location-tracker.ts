@@ -74,29 +74,9 @@ export class LocationTracker {
   stopTracking() {
  
     console.log('stopTracking');
-    let config = {
-        desiredAccuracy: 0,
-        stationaryRadius: 20,
-        distanceFilter: 10,
-        debug: true,
-        interval: 2000
-      };
+    
      
-      this.backgroundGeolocation.configure(config).subscribe((location) => {
-     
-        console.log('BackgroundGeolocation:  ' + location.latitude + ',' + location.longitude);
-     
-        // Run update inside of Angular's zone
-        this.zone.run(() => {
-            this.lat2 = location.latitude;
-            this.lng2 = location.latitude;
-        });
-     
-      }, (err) => {
-     
-        console.log(err);
-     
-      });
+      
    
     this.backgroundGeolocation.finish();
     this.watch.unsubscribe();
