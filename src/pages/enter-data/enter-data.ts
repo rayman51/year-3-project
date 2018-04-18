@@ -12,7 +12,7 @@ import { DataDetailPage } from '../data-detail/data-detail';
 })
 export class EnterDataPage {
   selectedItem: any;
-  data: {name?: string, text?: string, text2?:string} = {};
+  data: {name?: string, text?: string, text2?:string, text3?:string} = {};
   //items: FirebaseListObservable<any[]>;
   theItems: FirebaseListObservable<any[]>;
   uid: string;
@@ -45,7 +45,7 @@ export class EnterDataPage {
       this.uid = uid;
       this.theItems = this.af.database.list('/data' + '/' + this.uid);
 	  if (form.valid) {
-      this.theItems.push({ name: this.data.name, text: this.data.text, text2: this.data.text2 })
+      this.theItems.push({ name: this.data.name, text: this.data.text, text2: this.data.text2, text3: this.data.text3 })
       .then((val) => {
         this.message = 'Item Saved.';
       })

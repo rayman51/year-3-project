@@ -7,16 +7,12 @@ import 'rxjs/add/operator/filter';
 export class LocationTracker {
  
   public watch: any;   
-  public lat: number = 0;// start lat
-  public lng: number = 0;// start lng
-  public lat2;// end lat
-  public lng2;// end lng
-  
-  public dist: number = 0;
-
+  public lat: number = 0;
+  public lng: number = 0;
+ 
   constructor(public zone: NgZone, public backgroundGeolocation:BackgroundGeolocation,
-  public geolocation:Geolocation) {
-            
+public geolocation:Geolocation) {
+ 
   }
  
   startTracking() {
@@ -39,7 +35,6 @@ export class LocationTracker {
       this.zone.run(() => {
         this.lat = location.latitude;
         this.lng = location.longitude;
-        
       });
    
     }, (err) => {
@@ -76,21 +71,10 @@ export class LocationTracker {
   stopTracking() {
  
     console.log('stopTracking');
+   
     this.backgroundGeolocation.finish();
     this.watch.unsubscribe();
-    let options = {
-        
-        enableHighAccuracy: true
-      };
-    this.watch = this.geolocation.watchPosition(options).filter((p: any) => p.code === undefined).subscribe((position2: Geoposition) => {
-
-        this.zone.run(() => {
-      this.lat2= position2.coords.latitude;
-      this.lng2= position2.coords.longitude;
-    });
-    });
-    
-
+   
   }
  
 }

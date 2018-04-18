@@ -12,10 +12,8 @@
 
 <ion-content class="map-page">
   <div style="height: 65%; width: 100%" #map id="map"></div>
-  <h6>Start Latitude: {{locationTracker.lat}}</h6>
-  <h6>Start Longitude: {{locationTracker.lng}}</h6>
-  <h6>Finish Latitude: {{locationTracker.lat2}}</h6>
-  <h6>Finish Longitude: {{locationTracker.lng2}}</h6>
+  <h6>Current Latitude: {{locationTracker.lat}}</h6>
+  <h6>Current Longitude: {{locationTracker.lng}}</h6>
   <button ion-button full primary (click)="start()">Start Tracking</button>
   <button ion-button full primary (click)="stop()">Stop Tracking</button>
 </ion-content>
